@@ -54,9 +54,10 @@ static AccidentCasePollingService *_sharedInstance;
         if (responseObject[@"victims"]) {
 
             AccidentCase *accidentCase = [AccidentCase caseFromDictionary:responseObject];
+            [AccidentCase setCurrentAccidentCase:accidentCase];
             NSNotification *accidentCaseReceivedNotification = [NSNotification notificationWithName:AccidentCaseReceivedNotification
                                                                                              object:nil
-                                                                                           userInfo:@{@"case" : accidentCase}];
+                                                                                           userInfo:@{@"accidentCase" : accidentCase}];
             [[NSNotificationCenter defaultCenter]postNotification:accidentCaseReceivedNotification];
             [_timer invalidate];
 
@@ -65,6 +66,7 @@ static AccidentCasePollingService *_sharedInstance;
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
+        NSLog(@"Error in fetching accident service");
     }];
 }
 

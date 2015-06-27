@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class AccidentCase;
+
 @interface AccidentSummaryController : UIViewController
+
+@property (nonatomic, strong)AccidentCase *accidentCase;
 
 @end

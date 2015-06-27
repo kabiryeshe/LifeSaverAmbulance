@@ -13,7 +13,7 @@
 + (instancetype)victimFromDictionary:(NSDictionary *)dictionary {
     Victim *victim = [[Victim alloc]init];
     victim.name = dictionary[@"name"];
-    victim.age = (NSInteger)dictionary[@"age"];
+    victim.age =  (NSInteger)dictionary[@"age"];
     victim.photoURL = dictionary[@"photo"];
     victim.bloodGroup = [dictionary valueForKeyPath:@"medical_info.blood_group"];
     victim.emergencyContactNumber = [dictionary valueForKeyPath:@"emergency_details.contact_no"];

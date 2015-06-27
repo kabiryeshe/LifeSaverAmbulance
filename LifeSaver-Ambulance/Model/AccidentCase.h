@@ -13,9 +13,13 @@
 @interface AccidentCase : NSObject
 
 @property(nonatomic, strong) NSArray* victims;
-@property(nonatomic, strong) NSString* timeOfAccident;
+@property(nonatomic, strong) NSDate* timeOfAccident;
 @property(nonatomic, strong) Location* location;
 
 + (instancetype)caseFromDictionary:(NSDictionary *)dictionary;
++ (AccidentCase *)currentAccidentCase;
++ (void)setCurrentAccidentCase : (AccidentCase *)accidentCase;
+
+- (NSString *)timeElapsedSinceIncident;
 
 @end

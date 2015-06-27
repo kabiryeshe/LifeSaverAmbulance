@@ -7,6 +7,8 @@
 //
 
 #import "HomeController.h"
+#import "AccidentCase.h"
+#import "LSConstants.h"
 
 @interface HomeController ()
 
@@ -18,7 +20,7 @@
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(accidentHappened:)
-                                                name:@"AccidentRCaseReceivedNotification"
+                                                name:AccidentCaseReceivedNotification
                                               object:nil];
 }
 
@@ -29,6 +31,10 @@
 
 
 - (void)accidentHappened:(NSNotification *)notification {
-    NSLog(@"Accident Occured !!!!");
+    
+    [self performSegueWithIdentifier:@"AccidentDetails" sender:self];
+    
+    
 }
+
 @end
