@@ -8,6 +8,7 @@
 
 #import "AccidentCasePollingService.h"
 #import <AFNetworking/AFNetworking.h>
+#import "AccidentCase.h"
 
 @interface AccidentCasePollingService () {
     NSTimer *_timer;
@@ -34,6 +35,8 @@ static AccidentCasePollingService *_sharedInstance;
 
 - (void)start {
     
+    NSLog(@"Started Accident Case Polling Service");
+    
     _timer = [NSTimer timerWithTimeInterval:5.0
                                             target:self
                                           selector:@selector(pollForUpdates) userInfo:nil
@@ -44,7 +47,14 @@ static AccidentCasePollingService *_sharedInstance;
 - (void)pollForUpdates {
 
     [_manager GET:@"url" parameters:@{@"id":@"123"} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        if (responseObject[@"assignment"]) {
+        if (responseObject[@"victims"]) {
+            
+          //  AccidentCase *accidentCase = [AccidentCase caseFromDictionary:responseObject];
+            NSNotification *accidentCaseReceivedNotification = [NSNotification notificationWithName:@"AccidentCaseReceivedNotification"
+                                                                                             object:nil
+                                                                                           userInfo:@{@"case" : @" "}];
+            [[NSNotificationCenter defaultCenter]postNotification:accidentCaseReceivedNotification];
+
             
         }
         

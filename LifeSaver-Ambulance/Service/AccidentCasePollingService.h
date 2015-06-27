@@ -10,6 +10,8 @@
 
 @interface AccidentCasePollingService : NSObject
 
++ (instancetype)sharedInstance;
+
 - (void)start;
 
 @end
