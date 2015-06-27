@@ -15,6 +15,12 @@
 		E915FBD71B3E9926003D1672 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E915FBD61B3E9926003D1672 /* Images.xcassets */; };
 		E915FBDA1B3E9926003D1672 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E915FBD81B3E9926003D1672 /* LaunchScreen.xib */; };
 		E915FBE61B3E9926003D1672 /* LifeSaver_AmbulanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FBE51B3E9926003D1672 /* LifeSaver_AmbulanceTests.m */; };
+		E915FBF21B3EB098003D1672 /* AccidentSummaryController.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FBF11B3EB098003D1672 /* AccidentSummaryController.m */; };
+		E915FBF61B3EB844003D1672 /* Victim.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FBF51B3EB844003D1672 /* Victim.m */; };
+		E915FBF91B3EB9C5003D1672 /* MedicalInsurance.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FBF81B3EB9C5003D1672 /* MedicalInsurance.m */; };
+		E915FBFC1B3EBAD5003D1672 /* AccidentCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FBFB1B3EBAD5003D1672 /* AccidentCase.m */; };
+		E915FBFF1B3EBB59003D1672 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FBFE1B3EBB59003D1672 /* Location.m */; };
+		E915FC031B3EC035003D1672 /* AccidentCasePollingService.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FC021B3EC035003D1672 /* AccidentCasePollingService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,18 @@
 		E915FBDF1B3E9926003D1672 /* LifeSaver-AmbulanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LifeSaver-AmbulanceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E915FBE41B3E9926003D1672 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E915FBE51B3E9926003D1672 /* LifeSaver_AmbulanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeSaver_AmbulanceTests.m; sourceTree = "<group>"; };
+		E915FBF01B3EB098003D1672 /* AccidentSummaryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccidentSummaryController.h; path = Controller/AccidentSummaryController.h; sourceTree = "<group>"; };
+		E915FBF11B3EB098003D1672 /* AccidentSummaryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccidentSummaryController.m; path = Controller/AccidentSummaryController.m; sourceTree = "<group>"; };
+		E915FBF41B3EB844003D1672 /* Victim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Victim.h; path = Model/Victim.h; sourceTree = "<group>"; };
+		E915FBF51B3EB844003D1672 /* Victim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Victim.m; path = Model/Victim.m; sourceTree = "<group>"; };
+		E915FBF71B3EB9C5003D1672 /* MedicalInsurance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MedicalInsurance.h; path = Model/MedicalInsurance.h; sourceTree = "<group>"; };
+		E915FBF81B3EB9C5003D1672 /* MedicalInsurance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MedicalInsurance.m; path = Model/MedicalInsurance.m; sourceTree = "<group>"; };
+		E915FBFA1B3EBAD5003D1672 /* AccidentCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccidentCase.h; path = Model/AccidentCase.h; sourceTree = "<group>"; };
+		E915FBFB1B3EBAD5003D1672 /* AccidentCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccidentCase.m; path = Model/AccidentCase.m; sourceTree = "<group>"; };
+		E915FBFD1B3EBB59003D1672 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = Model/Location.h; sourceTree = "<group>"; };
+		E915FBFE1B3EBB59003D1672 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = Model/Location.m; sourceTree = "<group>"; };
+		E915FC011B3EC035003D1672 /* AccidentCasePollingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccidentCasePollingService.h; path = Service/AccidentCasePollingService.h; sourceTree = "<group>"; };
+		E915FC021B3EC035003D1672 /* AccidentCasePollingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccidentCasePollingService.m; path = Service/AccidentCasePollingService.m; sourceTree = "<group>"; };
 		F21CA21D4A4597102D979879 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +123,9 @@
 		E915FBC81B3E9926003D1672 /* LifeSaver-Ambulance */ = {
 			isa = PBXGroup;
 			children = (
+				E915FC001B3EBFA1003D1672 /* Service */,
+				E915FBF31B3EB81B003D1672 /* Model */,
+				E915FBEF1B3EB057003D1672 /* Controller */,
 				E915FBCD1B3E9926003D1672 /* AppDelegate.h */,
 				E915FBCE1B3E9926003D1672 /* AppDelegate.m */,
 				E915FBD01B3E9926003D1672 /* ViewController.h */,
@@ -141,6 +162,39 @@
 				E915FBE41B3E9926003D1672 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E915FBEF1B3EB057003D1672 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E915FBF01B3EB098003D1672 /* AccidentSummaryController.h */,
+				E915FBF11B3EB098003D1672 /* AccidentSummaryController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E915FBF31B3EB81B003D1672 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E915FBF41B3EB844003D1672 /* Victim.h */,
+				E915FBF51B3EB844003D1672 /* Victim.m */,
+				E915FBF71B3EB9C5003D1672 /* MedicalInsurance.h */,
+				E915FBF81B3EB9C5003D1672 /* MedicalInsurance.m */,
+				E915FBFA1B3EBAD5003D1672 /* AccidentCase.h */,
+				E915FBFB1B3EBAD5003D1672 /* AccidentCase.m */,
+				E915FBFD1B3EBB59003D1672 /* Location.h */,
+				E915FBFE1B3EBB59003D1672 /* Location.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E915FC001B3EBFA1003D1672 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E915FC011B3EC035003D1672 /* AccidentCasePollingService.h */,
+				E915FC021B3EC035003D1672 /* AccidentCasePollingService.m */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,9 +332,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E915FBF91B3EB9C5003D1672 /* MedicalInsurance.m in Sources */,
 				E915FBD21B3E9926003D1672 /* ViewController.m in Sources */,
 				E915FBCF1B3E9926003D1672 /* AppDelegate.m in Sources */,
 				E915FBCC1B3E9926003D1672 /* main.m in Sources */,
+				E915FC031B3EC035003D1672 /* AccidentCasePollingService.m in Sources */,
+				E915FBFC1B3EBAD5003D1672 /* AccidentCase.m in Sources */,
+				E915FBF61B3EB844003D1672 /* Victim.m in Sources */,
+				E915FBFF1B3EBB59003D1672 /* Location.m in Sources */,
+				E915FBF21B3EB098003D1672 /* AccidentSummaryController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +466,7 @@
 				INFOPLIST_FILE = "LifeSaver-Ambulance/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -417,6 +478,7 @@
 				INFOPLIST_FILE = "LifeSaver-Ambulance/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
