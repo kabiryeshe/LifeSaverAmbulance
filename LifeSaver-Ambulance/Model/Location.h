@@ -13,4 +13,6 @@
 @property(nonatomic, strong) NSString* latitude;
 @property(nonatomic, strong) NSString* longitude;
 
++ (instancetype)locationFromDictionary:(NSDictionary *)dictionary;
+
 @end

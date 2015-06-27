@@ -16,6 +16,6 @@
 @property(nonatomic, strong) NSString* timeOfAccident;
 @property(nonatomic, strong) Location* location;
 
-//+ (instancetype)caseFromDictionary:(NSDictionary *)dictionary;
++ (instancetype)caseFromDictionary:(NSDictionary *)dictionary;
 
 @end

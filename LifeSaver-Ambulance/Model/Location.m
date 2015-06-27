@@ -10,4 +10,10 @@
 
 @implementation Location
 
++ (instancetype)locationFromDictionary:(NSDictionary *)dictionary {
+    Location *location = [[Location alloc]init];
+    location.latitude = dictionary[@"lat"];
+    location.longitude = dictionary[@"long"];
+    return location;
+}
 @end

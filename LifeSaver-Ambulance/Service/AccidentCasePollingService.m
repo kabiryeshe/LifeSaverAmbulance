@@ -9,7 +9,7 @@
 #import "AccidentCasePollingService.h"
 #import <AFNetworking/AFNetworking.h>
 #import "AccidentCase.h"
-
+#import "LSConstants.h"
 @interface AccidentCasePollingService () {
     NSTimer *_timer;
 }
@@ -37,26 +37,31 @@ static AccidentCasePollingService *_sharedInstance;
     
     NSLog(@"Started Accident Case Polling Service");
     
-    _timer = [NSTimer timerWithTimeInterval:5.0
-                                            target:self
-                                          selector:@selector(pollForUpdates) userInfo:nil
-                                           repeats:YES];
+     _timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(pollForUpdates) userInfo:nil repeats:YES];
+   
+
     [_timer fire];
 }
 
 - (void)pollForUpdates {
+    
+    NSString *url = @"ambulance/1/accident";
+    
+    NSLog(@"Polling for accident Details!");
 
-    [_manager GET:@"url" parameters:@{@"id":@"123"} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [self.manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
         if (responseObject[@"victims"]) {
-            
-          //  AccidentCase *accidentCase = [AccidentCase caseFromDictionary:responseObject];
-            NSNotification *accidentCaseReceivedNotification = [NSNotification notificationWithName:@"AccidentCaseReceivedNotification"
-                                                                                             object:nil
-                                                                                           userInfo:@{@"case" : @" "}];
-            [[NSNotificationCenter defaultCenter]postNotification:accidentCaseReceivedNotification];
 
-            
+            AccidentCase *accidentCase = [AccidentCase caseFromDictionary:responseObject];
+            NSNotification *accidentCaseReceivedNotification = [NSNotification notificationWithName:AccidentCaseReceivedNotification
+                                                                                             object:nil
+                                                                                           userInfo:@{@"case" : accidentCase}];
+            [[NSNotificationCenter defaultCenter]postNotification:accidentCaseReceivedNotification];
+            [_timer invalidate];
+
         }
+        
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
@@ -66,7 +71,7 @@ static AccidentCasePollingService *_sharedInstance;
 
 - (AFHTTPRequestOperationManager *)manager {
     if(!_manager) {
-        _manager = [AFHTTPRequestOperationManager manager];
+        _manager = [[AFHTTPRequestOperationManager alloc]initWithBaseURL:[NSURL URLWithString:BaseURL]];
     }
     return _manager;
 }

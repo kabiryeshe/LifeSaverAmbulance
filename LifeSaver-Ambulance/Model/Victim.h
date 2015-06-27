@@ -20,4 +20,6 @@
 @property(nonatomic, strong) NSString *identificationMark;
 @property(nonatomic, strong) MedicalInsurance *medicalInsurace;
 
++ (instancetype)victimFromDictionary:(NSDictionary *)dictionary;
+
 @end

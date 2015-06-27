@@ -21,6 +21,7 @@
 		E915FBFC1B3EBAD5003D1672 /* AccidentCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FBFB1B3EBAD5003D1672 /* AccidentCase.m */; };
 		E915FBFF1B3EBB59003D1672 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FBFE1B3EBB59003D1672 /* Location.m */; };
 		E915FC031B3EC035003D1672 /* AccidentCasePollingService.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FC021B3EC035003D1672 /* AccidentCasePollingService.m */; };
+		E915FC071B3EDDBF003D1672 /* LSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FC061B3EDDBF003D1672 /* LSConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		E915FBFE1B3EBB59003D1672 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = Model/Location.m; sourceTree = "<group>"; };
 		E915FC011B3EC035003D1672 /* AccidentCasePollingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccidentCasePollingService.h; path = Service/AccidentCasePollingService.h; sourceTree = "<group>"; };
 		E915FC021B3EC035003D1672 /* AccidentCasePollingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccidentCasePollingService.m; path = Service/AccidentCasePollingService.m; sourceTree = "<group>"; };
+		E915FC051B3EDDBF003D1672 /* LSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSConstants.h; sourceTree = "<group>"; };
+		E915FC061B3EDDBF003D1672 /* LSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSConstants.m; sourceTree = "<group>"; };
 		F21CA21D4A4597102D979879 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +126,7 @@
 		E915FBC81B3E9926003D1672 /* LifeSaver-Ambulance */ = {
 			isa = PBXGroup;
 			children = (
+				E915FC041B3EDDA0003D1672 /* Utils */,
 				E915FC001B3EBFA1003D1672 /* Service */,
 				E915FBF31B3EB81B003D1672 /* Model */,
 				E915FBEF1B3EB057003D1672 /* Controller */,
@@ -195,6 +199,15 @@
 				E915FC021B3EC035003D1672 /* AccidentCasePollingService.m */,
 			);
 			name = Service;
+			sourceTree = "<group>";
+		};
+		E915FC041B3EDDA0003D1672 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E915FC051B3EDDBF003D1672 /* LSConstants.h */,
+				E915FC061B3EDDBF003D1672 /* LSConstants.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +351,7 @@
 				E915FBCC1B3E9926003D1672 /* main.m in Sources */,
 				E915FC031B3EC035003D1672 /* AccidentCasePollingService.m in Sources */,
 				E915FBFC1B3EBAD5003D1672 /* AccidentCase.m in Sources */,
+				E915FC071B3EDDBF003D1672 /* LSConstants.m in Sources */,
 				E915FBF61B3EB844003D1672 /* Victim.m in Sources */,
 				E915FBFF1B3EBB59003D1672 /* Location.m in Sources */,
 				E915FBF21B3EB098003D1672 /* AccidentSummaryController.m in Sources */,
