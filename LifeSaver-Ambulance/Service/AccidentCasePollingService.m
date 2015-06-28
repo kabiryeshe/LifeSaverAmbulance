@@ -10,8 +10,11 @@
 #import <AFNetworking/AFNetworking.h>
 #import "AccidentCase.h"
 #import "LSConstants.h"
+#import <AVFoundation/AVFoundation.h>
+
 @interface AccidentCasePollingService () {
     NSTimer *_timer;
+    AVAudioPlayer *_player;
 }
 
 @property(nonatomic, strong) AFHTTPRequestOperationManager *manager;
@@ -60,7 +63,8 @@ static AccidentCasePollingService *_sharedInstance;
                                                                                            userInfo:@{@"accidentCase" : accidentCase}];
             [[NSNotificationCenter defaultCenter]postNotification:accidentCaseReceivedNotification];
             [_timer invalidate];
-
+            
+            [self playAmbulanceSound];
         }
         
         
@@ -70,6 +74,22 @@ static AccidentCasePollingService *_sharedInstance;
     }];
 }
 
+- (void)playAmbulanceSound {
+    NSString *path;
+    
+    NSURL *url;
+    
+    path =[[NSBundle mainBundle] pathForResource:@"ambulance_sound" ofType:@"mp3"];
+    
+    url = [NSURL fileURLWithPath:path];
+    _player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
+    [_player setVolume:1.0];
+    [_player play];
+}
+
+- (void)stopSound {
+    [_player pause];
+}
 
 - (AFHTTPRequestOperationManager *)manager {
     if(!_manager) {

@@ -29,6 +29,8 @@
 		E915FC1A1B3F41AB003D1672 /* TimeElapsedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FC191B3F41AB003D1672 /* TimeElapsedView.m */; };
 		E915FC1D1B3F4340003D1672 /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FC1C1B3F4340003D1672 /* BaseController.m */; };
 		E915FC201B3F8F02003D1672 /* VictimDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FC1F1B3F8F02003D1672 /* VictimDetailController.m */; };
+		E915FC2A1B3FAE64003D1672 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E915FC291B3FAE64003D1672 /* AVFoundation.framework */; };
+		E915FC2C1B3FB16D003D1672 /* ambulance_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E915FC2B1B3FB16D003D1672 /* ambulance_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		E915FC1C1B3F4340003D1672 /* BaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseController.m; path = Controller/BaseController.m; sourceTree = "<group>"; };
 		E915FC1E1B3F8F02003D1672 /* VictimDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VictimDetailController.h; path = Controller/VictimDetailController.h; sourceTree = "<group>"; };
 		E915FC1F1B3F8F02003D1672 /* VictimDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VictimDetailController.m; path = Controller/VictimDetailController.m; sourceTree = "<group>"; };
+		E915FC291B3FAE64003D1672 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E915FC2B1B3FB16D003D1672 /* ambulance_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ambulance_sound.mp3; path = ../../../ambulance_sound.mp3; sourceTree = "<group>"; };
 		F21CA21D4A4597102D979879 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E915FC2A1B3FAE64003D1672 /* AVFoundation.framework in Frameworks */,
 				8EFC3F591F81D3A6F58F098F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +123,7 @@
 		3E7329580377DEB15E45D029 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E915FC291B3FAE64003D1672 /* AVFoundation.framework */,
 				7D519DE6C49399569DB8A526 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -165,6 +171,7 @@
 		E915FBC91B3E9926003D1672 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E915FC2B1B3FB16D003D1672 /* ambulance_sound.mp3 */,
 				E915FBCA1B3E9926003D1672 /* Info.plist */,
 				E915FBCB1B3E9926003D1672 /* main.m */,
 			);
@@ -345,6 +352,7 @@
 				E915FBD51B3E9926003D1672 /* Main.storyboard in Resources */,
 				E915FBDA1B3E9926003D1672 /* LaunchScreen.xib in Resources */,
 				E915FBD71B3E9926003D1672 /* Images.xcassets in Resources */,
+				E915FC2C1B3FB16D003D1672 /* ambulance_sound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
