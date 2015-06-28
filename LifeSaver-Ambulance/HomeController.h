@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TimeElapsedView.h"
 
 @interface HomeController : UIViewController
+
+
 
 
 @end

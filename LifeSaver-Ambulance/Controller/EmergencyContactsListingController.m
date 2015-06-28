@@ -4,6 +4,7 @@
 #import "AccidentCase.h"
 
 @interface EmergencyContactsListingController () <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UIView *timerView;
 
 @end
 
@@ -12,8 +13,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.victims = [AccidentCase currentAccidentCase].victims;
+    [self.timerView addSubview:self.timeElapsedView];
 }
-
 
 
 #pragma mark - Table View

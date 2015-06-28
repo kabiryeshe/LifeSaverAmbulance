@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseController.h"
 
 @class AccidentCase;
 
-@interface AccidentSummaryController : UIViewController
+@interface AccidentSummaryController : BaseController
 
 @property (nonatomic, strong)AccidentCase *accidentCase;
 

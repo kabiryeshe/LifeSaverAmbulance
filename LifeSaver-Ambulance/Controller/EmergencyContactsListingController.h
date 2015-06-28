@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseController.h"
 
-@interface EmergencyContactsListingController : UIViewController
+@interface EmergencyContactsListingController : BaseController
 
 @property(nonatomic, strong)NSArray *victims;
 

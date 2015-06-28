@@ -9,6 +9,7 @@
 #import "AccidentSummaryController.h"
 #import "AccidentCase.h"
 #import "VictimInfoTableCell.h"
+#import "VictimDetailController.h"
 
 @interface AccidentSummaryController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -16,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *estimatedTimeToReachLabel;
 @property (weak, nonatomic) IBOutlet UILabel *victimsLabel;
 @property (weak, nonatomic) IBOutlet UITableView *victimsTableView;
-@property (weak, nonatomic) IBOutlet UILabel *timeElapsed;
+@property (weak, nonatomic) IBOutlet UIView *timerView;
 
 @end
 
@@ -25,22 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.accidentCase = [AccidentCase currentAccidentCase];
-    [self startTimer];
+    [self.timerView addSubview:self.timeElapsedView];
 }
 
-- (void)startTimer {
-    [[NSTimer scheduledTimerWithTimeInterval:1
-                                     target:self
-                                   selector:@selector(updateTimeElapsed)
-                                   userInfo:nil
-                                    repeats:YES] fire];
-    
-}
-
-- (void)updateTimeElapsed {
-    
-    self.timeElapsed.text = self.accidentCase.timeElapsedSinceIncident;
-}
 
 - (void)populateSummaryPanel {
     
@@ -72,8 +60,17 @@
 }
 
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 0;
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Row Selected");
+    [self performSegueWithIdentifier:@"VictimDetails" sender:self.accidentCase.victims[indexPath.row]];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqual: @"VictimDetails"]) {
+        ((VictimDetailController *)segue.destinationViewController).victim = sender;
+    }
 }
 
 @end

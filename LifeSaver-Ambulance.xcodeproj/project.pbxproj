@@ -25,6 +25,10 @@
 		E915FC0D1B3EF453003D1672 /* VictimInfoTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FC0C1B3EF453003D1672 /* VictimInfoTableCell.m */; };
 		E915FC111B3F23CD003D1672 /* EmergencyContactInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FC101B3F23CD003D1672 /* EmergencyContactInfoCell.m */; };
 		E915FC141B3F262F003D1672 /* EmergencyContactsListingController.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FC131B3F262F003D1672 /* EmergencyContactsListingController.m */; };
+		E915FC171B3F40BD003D1672 /* TimeElapsedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E915FC161B3F40BD003D1672 /* TimeElapsedView.xib */; };
+		E915FC1A1B3F41AB003D1672 /* TimeElapsedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FC191B3F41AB003D1672 /* TimeElapsedView.m */; };
+		E915FC1D1B3F4340003D1672 /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FC1C1B3F4340003D1672 /* BaseController.m */; };
+		E915FC201B3F8F02003D1672 /* VictimDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FC1F1B3F8F02003D1672 /* VictimDetailController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,13 @@
 		E915FC101B3F23CD003D1672 /* EmergencyContactInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmergencyContactInfoCell.m; path = View/EmergencyContactInfoCell.m; sourceTree = "<group>"; };
 		E915FC121B3F262F003D1672 /* EmergencyContactsListingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmergencyContactsListingController.h; path = Controller/EmergencyContactsListingController.h; sourceTree = "<group>"; };
 		E915FC131B3F262F003D1672 /* EmergencyContactsListingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmergencyContactsListingController.m; path = Controller/EmergencyContactsListingController.m; sourceTree = "<group>"; };
+		E915FC161B3F40BD003D1672 /* TimeElapsedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeElapsedView.xib; sourceTree = "<group>"; };
+		E915FC181B3F41AB003D1672 /* TimeElapsedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeElapsedView.h; sourceTree = "<group>"; };
+		E915FC191B3F41AB003D1672 /* TimeElapsedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeElapsedView.m; sourceTree = "<group>"; };
+		E915FC1B1B3F4340003D1672 /* BaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseController.h; path = Controller/BaseController.h; sourceTree = "<group>"; };
+		E915FC1C1B3F4340003D1672 /* BaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseController.m; path = Controller/BaseController.m; sourceTree = "<group>"; };
+		E915FC1E1B3F8F02003D1672 /* VictimDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VictimDetailController.h; path = Controller/VictimDetailController.h; sourceTree = "<group>"; };
+		E915FC1F1B3F8F02003D1672 /* VictimDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VictimDetailController.m; path = Controller/VictimDetailController.m; sourceTree = "<group>"; };
 		F21CA21D4A4597102D979879 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +146,7 @@
 		E915FBC81B3E9926003D1672 /* LifeSaver-Ambulance */ = {
 			isa = PBXGroup;
 			children = (
+				E915FC151B3F4084003D1672 /* Views */,
 				E915FC041B3EDDA0003D1672 /* Utils */,
 				E915FC001B3EBFA1003D1672 /* Service */,
 				E915FBF31B3EB81B003D1672 /* Model */,
@@ -145,7 +157,7 @@
 				E915FBD61B3E9926003D1672 /* Images.xcassets */,
 				E915FBD81B3E9926003D1672 /* LaunchScreen.xib */,
 				E915FBC91B3E9926003D1672 /* Supporting Files */,
-				E915FC0E1B3EF456003D1672 /* View */,
+				E915FC0E1B3EF456003D1672 /* View Classes */,
 			);
 			path = "LifeSaver-Ambulance";
 			sourceTree = "<group>";
@@ -185,6 +197,10 @@
 				E915FBF11B3EB098003D1672 /* AccidentSummaryController.m */,
 				E915FC121B3F262F003D1672 /* EmergencyContactsListingController.h */,
 				E915FC131B3F262F003D1672 /* EmergencyContactsListingController.m */,
+				E915FC1B1B3F4340003D1672 /* BaseController.h */,
+				E915FC1C1B3F4340003D1672 /* BaseController.m */,
+				E915FC1E1B3F8F02003D1672 /* VictimDetailController.h */,
+				E915FC1F1B3F8F02003D1672 /* VictimDetailController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -222,15 +238,25 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		E915FC0E1B3EF456003D1672 /* View */ = {
+		E915FC0E1B3EF456003D1672 /* View Classes */ = {
 			isa = PBXGroup;
 			children = (
 				E915FC0B1B3EF453003D1672 /* VictimInfoTableCell.h */,
 				E915FC0C1B3EF453003D1672 /* VictimInfoTableCell.m */,
 				E915FC0F1B3F23CD003D1672 /* EmergencyContactInfoCell.h */,
 				E915FC101B3F23CD003D1672 /* EmergencyContactInfoCell.m */,
+				E915FC181B3F41AB003D1672 /* TimeElapsedView.h */,
+				E915FC191B3F41AB003D1672 /* TimeElapsedView.m */,
 			);
-			name = View;
+			name = "View Classes";
+			sourceTree = "<group>";
+		};
+		E915FC151B3F4084003D1672 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E915FC161B3F40BD003D1672 /* TimeElapsedView.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E915FC171B3F40BD003D1672 /* TimeElapsedView.xib in Resources */,
 				E915FBD51B3E9926003D1672 /* Main.storyboard in Resources */,
 				E915FBDA1B3E9926003D1672 /* LaunchScreen.xib in Resources */,
 				E915FBD71B3E9926003D1672 /* Images.xcassets in Resources */,
@@ -369,11 +396,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E915FC111B3F23CD003D1672 /* EmergencyContactInfoCell.m in Sources */,
+				E915FC1D1B3F4340003D1672 /* BaseController.m in Sources */,
 				E915FC0D1B3EF453003D1672 /* VictimInfoTableCell.m in Sources */,
 				E915FBF91B3EB9C5003D1672 /* MedicalInsurance.m in Sources */,
 				E915FBD21B3E9926003D1672 /* HomeController.m in Sources */,
 				E915FBCF1B3E9926003D1672 /* AppDelegate.m in Sources */,
+				E915FC201B3F8F02003D1672 /* VictimDetailController.m in Sources */,
 				E915FBCC1B3E9926003D1672 /* main.m in Sources */,
+				E915FC1A1B3F41AB003D1672 /* TimeElapsedView.m in Sources */,
 				E915FC141B3F262F003D1672 /* EmergencyContactsListingController.m in Sources */,
 				E915FC031B3EC035003D1672 /* AccidentCasePollingService.m in Sources */,
 				E915FBFC1B3EBAD5003D1672 /* AccidentCase.m in Sources */,
