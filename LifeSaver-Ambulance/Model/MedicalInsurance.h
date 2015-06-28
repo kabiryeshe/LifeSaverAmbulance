@@ -14,4 +14,6 @@
 @property(nonatomic, strong) NSString *insuranceId;
 @property(nonatomic, strong) NSString *contactNumber;
 
++ (instancetype)medicalRecordFromDictionary:(NSDictionary *)dictionary;
+
 @end

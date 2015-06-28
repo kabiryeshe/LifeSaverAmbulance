@@ -18,8 +18,11 @@
 @property(nonatomic, strong) NSString *emergencyContactPerson;
 @property(nonatomic, strong) NSString *emergencyContactNumber;
 @property(nonatomic, strong) NSString *bloodGroup;
-@property(nonatomic, strong) NSString *identificationMark;
+@property(nonatomic, strong) NSString *birthMark;
 @property(nonatomic, strong) MedicalInsurance *medicalInsurace;
+@property(nonatomic, strong) NSArray *medicalRecords;
+
+
 
 + (instancetype)victimFromDictionary:(NSDictionary *)dictionary;
 

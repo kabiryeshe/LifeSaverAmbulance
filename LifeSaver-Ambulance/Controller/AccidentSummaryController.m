@@ -27,6 +27,7 @@
     [super viewDidLoad];
     self.accidentCase = [AccidentCase currentAccidentCase];
     [self.timerView addSubview:self.timeElapsedView];
+    [self populateSummaryPanel];
 }
 
 

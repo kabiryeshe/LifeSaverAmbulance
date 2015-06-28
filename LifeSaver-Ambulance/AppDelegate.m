@@ -18,7 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    for (NSString *fontFamilyName in [UIFont familyNames]) {
+        for (NSString *fontName in [UIFont fontNamesForFamilyName:fontFamilyName]) {
+            NSLog(@"Family: %@    Font: %@", fontFamilyName, fontName);
+        }
+    }
     [[AccidentCasePollingService sharedInstance]start];
     return YES;
 }

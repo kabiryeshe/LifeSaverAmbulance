@@ -10,4 +10,13 @@
 
 @implementation MedicalInsurance
 
+
++ (instancetype)medicalRecordFromDictionary:(NSDictionary *)dictionary {
+    
+    MedicalInsurance *medicalInsurance = [[MedicalInsurance alloc]init];
+    medicalInsurance.contactNumber =  dictionary[@"contact_no"];
+    medicalInsurance.provider = dictionary[@"provider"];
+    medicalInsurance.insuranceId = dictionary[@"insurance_id"];
+    return medicalInsurance;    
+}
 @end

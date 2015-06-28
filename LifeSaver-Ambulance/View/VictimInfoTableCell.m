@@ -11,7 +11,7 @@
 
 @interface VictimInfoTableCell() {
     
-    __weak IBOutlet UIImageView *imageView;
+    __weak IBOutlet UIImageView *victimImageView;
     __weak IBOutlet UILabel *nameLabel;
     __weak IBOutlet UILabel *ageLabel;
     __weak IBOutlet UILabel *genderLabel;
@@ -22,7 +22,7 @@
 @implementation VictimInfoTableCell
 
 - (void)populateWithVictimInfo:(Victim *)victim {
-    imageView.image = [UIImage imageNamed:victim.photoURL];
+    victimImageView.image = [UIImage imageNamed:victim.photoURL];
     nameLabel.text = victim.name;
     ageLabel.text = [@(victim.age) stringValue];
     genderLabel.text = victim.gender;
