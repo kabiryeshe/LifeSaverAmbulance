@@ -276,10 +276,12 @@
             <objects>
                 <tabBarController id="uZQ-q1-6cF" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="rDZ-mx-zT1">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" itemPositioning="fill" id="rDZ-mx-zT1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.14913778890000001" green="0.7527166998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Bua-pj-yVS" kind="relationship" relationship="viewControllers" id="kov-QA-Tgi"/>
@@ -294,7 +296,9 @@
         <scene sceneID="dRV-O7-6vY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bua-pj-yVS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Accident Summary" id="Srw-ZH-h6d"/>
+                    <tabBarItem key="tabBarItem" title="Accident Summary" id="Srw-ZH-h6d">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="cxH-gT-KQB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -313,7 +317,9 @@
         <scene sceneID="xdf-sJ-8nw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dCU-St-h3g" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="Emergency Contacts" id="QLH-Zb-E4V"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Emergency Contacts" id="QLH-Zb-E4V">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="hF4-yx-pLS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

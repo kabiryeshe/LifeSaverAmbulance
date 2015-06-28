@@ -17,13 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    for (NSString *fontFamilyName in [UIFont familyNames]) {
-        for (NSString *fontName in [UIFont fontNamesForFamilyName:fontFamilyName]) {
-            NSLog(@"Family: %@    Font: %@", fontFamilyName, fontName);
-        }
-    }
+
     [[AccidentCasePollingService sharedInstance]start];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSFontAttributeName :[UIFont fontWithName:@"AvenirNextCondensed-Bold" size:12.0f],
+                                                         NSForegroundColorAttributeName : [UIColor whiteColor]
+                                                        }
+                                             forState:UIControlStateNormal];
+        [[UITabBar appearance]setSelectionIndicatorImage:[UIImage imageNamed:@"selection_image"]];
     return YES;
 }
 
