@@ -32,6 +32,7 @@
 		E915FC2A1B3FAE64003D1672 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E915FC291B3FAE64003D1672 /* AVFoundation.framework */; };
 		E915FC2C1B3FB16D003D1672 /* ambulance_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E915FC2B1B3FB16D003D1672 /* ambulance_sound.mp3 */; };
 		E915FC2F1B3FC020003D1672 /* LSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FC2E1B3FC020003D1672 /* LSLabel.m */; };
+		E915FC321B3FCEC0003D1672 /* VictimsMiscDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E915FC311B3FCEC0003D1672 /* VictimsMiscDetailCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,8 @@
 		E915FC2B1B3FB16D003D1672 /* ambulance_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ambulance_sound.mp3; path = ../../../ambulance_sound.mp3; sourceTree = "<group>"; };
 		E915FC2D1B3FC020003D1672 /* LSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSLabel.h; sourceTree = "<group>"; };
 		E915FC2E1B3FC020003D1672 /* LSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSLabel.m; sourceTree = "<group>"; };
+		E915FC301B3FCEC0003D1672 /* VictimsMiscDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VictimsMiscDetailCell.h; sourceTree = "<group>"; };
+		E915FC311B3FCEC0003D1672 /* VictimsMiscDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VictimsMiscDetailCell.m; sourceTree = "<group>"; };
 		F21CA21D4A4597102D979879 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +170,8 @@
 				E915FBD81B3E9926003D1672 /* LaunchScreen.xib */,
 				E915FBC91B3E9926003D1672 /* Supporting Files */,
 				E915FC0E1B3EF456003D1672 /* View Classes */,
+				E915FC301B3FCEC0003D1672 /* VictimsMiscDetailCell.h */,
+				E915FC311B3FCEC0003D1672 /* VictimsMiscDetailCell.m */,
 			);
 			path = "LifeSaver-Ambulance";
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 				E915FBF91B3EB9C5003D1672 /* MedicalInsurance.m in Sources */,
 				E915FBD21B3E9926003D1672 /* HomeController.m in Sources */,
 				E915FBCF1B3E9926003D1672 /* AppDelegate.m in Sources */,
+				E915FC321B3FCEC0003D1672 /* VictimsMiscDetailCell.m in Sources */,
 				E915FC201B3F8F02003D1672 /* VictimDetailController.m in Sources */,
 				E915FC2F1B3FC020003D1672 /* LSLabel.m in Sources */,
 				E915FBCC1B3E9926003D1672 /* main.m in Sources */,

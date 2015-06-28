@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Victim.h"
+#import "BaseController.h"
 
-@interface VictimDetailController : UITableViewController
+@interface VictimDetailController : BaseController
 
 @property (nonatomic, strong) Victim *victim;
 

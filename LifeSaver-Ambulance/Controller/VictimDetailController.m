@@ -7,16 +7,15 @@
 //
 
 #import "VictimDetailController.h"
+#import "VictimsMiscDetailCell.h"
 
-typedef enum VictimDetailCell {
-    
-    PersonalInfo = 0,
+typedef enum {
     MedicalDetails,
     MedicalInsuranceDetails,
     EmergencyContact,
     ClinicalRecords
     
-};
+} VictimDetailCell;
 
 @interface VictimDetailController ()
 
@@ -25,6 +24,7 @@ typedef enum VictimDetailCell {
 @property (weak, nonatomic) IBOutlet UILabel *gender;
 @property (weak, nonatomic) IBOutlet UILabel *birthmark;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIView *timerView;
 
 @end
 
@@ -33,6 +33,8 @@ typedef enum VictimDetailCell {
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = self.victim.name;
+    
+    [self.timerView addSubview:self.timeElapsedView];
     [self populatePersonalInfo];
     
 }
@@ -45,22 +47,27 @@ typedef enum VictimDetailCell {
     self.age.text = [@(self.victim.age)stringValue];
 }
 
+
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 4;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    NSArray *titles = @[@"Medical Details",@"Medical Insurance Details",@"Emergency Contact",@"Clinical Records"];
+    VictimsMiscDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VictimsMiscDetailCell"];
+    [cell populateWithTitle:titles[indexPath.row]];
     
     return cell
     ;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView  heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100.0;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -68,7 +75,7 @@ typedef enum VictimDetailCell {
     NSString *info = @"";
     NSString *alerTitle = @"";
     
-    if(indexPath.row == PersonalInfo || indexPath.row == ClinicalRecords)
+    if(indexPath.row == ClinicalRecords)
         return;
     
     if(indexPath.row == MedicalDetails) {
