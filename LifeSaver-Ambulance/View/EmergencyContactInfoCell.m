@@ -25,6 +25,7 @@
 
 - (void)populateWithContent:(Victim *)victim {
     
+    victimsImageView.image = [UIImage imageNamed:victim.photoURL];
     victimsName.text = victim.name;
     emergencyContactNameLabel.text = victim.emergencyContactPerson;
     emergencyContactNumberLabel.text = victim.emergencyContactNumber;
